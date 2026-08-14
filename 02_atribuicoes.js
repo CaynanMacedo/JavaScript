@@ -1,0 +1,2 @@
+//AULA 2 ATRIBUIÇÕES DE VALORES 
+let preco = 19.90
