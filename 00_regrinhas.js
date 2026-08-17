@@ -1,0 +1,19 @@
+//tradução e regras do javascript 
+//comentario normal 
+/*comentario infinito por varias linhas 
+
+(=) = recebe
+
+variavel não pode ter caracter especial, acento, numero no começo nem maiusculo e nem com mesmo nome
+
+variavel texto precias de ""
+
+concatenação (juntar pedaços de texto) com o + na frente do console 
+
+19.90 float = casas decimais
+string = texto
+25 int = numero inteiro
+boolean ou bool = true or false 0 1 
+
+contas matematicas (+, -, *, /)
+*/
