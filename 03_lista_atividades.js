@@ -8,11 +8,11 @@ Desenhe no terminal um retângulo usando apenas o comando do console.log
 |     |
 |_____|
 */
-console.log("____")
-console.log("|   |")
-console.log("|   |")
-console.log("|   |")
-console.log("|___|\n\n");
+console.log(" ______")
+console.log("|      |")
+console.log("|      |")
+console.log("|      |")
+console.log("|______|\n\n");
 
 /*
 ### ----- Atividade 1:
