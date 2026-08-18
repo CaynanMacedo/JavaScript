@@ -16,4 +16,25 @@ string = texto
 boolean ou bool = true or false 0 1 
 
 contas matematicas (+, -, *, /)
+
+PROMPTs
+para usar ele é necessario o 
+
+*
+let prompt = require("prompt-sync")()
+*
+let prompt = require("prompt-sync")()
+
+let nome = prompt("Ola digite o seu nome ")
+let sobrenome = prompt("Digite seu sobrenome ")
+let idade = prompt("Digite sua idade ")
+let nome_completo = nome +" "+ sobrenome
+
+console.log("seja bem vindo(a) " +nome_completo+ " voce tem " +idade+ " anos de idade \n\n\n")
+
+parseInt e parceFloat trnaformam de string pra int ou float
+
+var1 = parseInt(var1) linha de baixo 
+let var2 = parseInt( prompt("Digite outro numero ") ) mema linha         
+
 */
