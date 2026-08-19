@@ -17,13 +17,23 @@ boolean ou bool = true or false 0 1
 
 contas matematicas (+, -, *, /)
 
+desc p/ porcentagem   desconto = desconto / 100
+
+< maior
+> menor
+== iguar 
+!= diferente
+
 PROMPTs
 para usar ele é necessario o 
 
-*
+**
+**
+
 let prompt = require("prompt-sync")()
-*
-let prompt = require("prompt-sync")()
+
+**
+**
 
 let nome = prompt("Ola digite o seu nome ")
 let sobrenome = prompt("Digite seu sobrenome ")

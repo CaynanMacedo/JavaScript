@@ -23,11 +23,11 @@ console.log("voce tem " +idade);
 //ATIVIDADE 2 
 
 let nota1 = prompt("digite sua nota ") 
-nota1 = parseInt(nota1)
+nota1 = parseFloat(nota1)
 let nota2 = prompt("digite sua nota ")
-nota2 = parseInt(nota2)
+nota2 = parseFloat(nota2)
 let nota3 = prompt("digite sua nota ")
-nota3 = parseInt(nota3)
+nota3 = parseFloat(nota3)
 let media = (nota1 + nota2 + nota3) / 3
 console.log("sua media é igual a " +media);
 
