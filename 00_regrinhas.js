@@ -19,8 +19,8 @@ contas matematicas (+, -, *, /)
 
 desc p/ porcentagem   desconto = desconto / 100
 
-< maior
-> menor
+> maior
+< menor
 == iguar 
 != diferente
 
