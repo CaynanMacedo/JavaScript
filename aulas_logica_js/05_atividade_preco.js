@@ -18,17 +18,11 @@ let custo_dogcremoso = pao + 2 * salsicha + queijo
 let custo_dogespecial = pao + salsicha + pure + queijo + bacon
 let custo_combo = custo_dogpure + custo_dogcremoso + custo_dogespecial 
 
-let venda_dogpure = custo_dogpure * lucro
-let venda_dogcremoso = custo_dogcremoso * lucro
-let venda_dogespecial = custo_dogespecial * lucro
-let venda_combo = custo_combo * lucro
+let venda_dogpure = custo_dogpure * lucro +  custo_dogpure
+let venda_dogcremoso = custo_dogcremoso * lucro + custo_dogcremoso 
+let venda_dogespecial = custo_dogespecial * lucro + custo_dogespecial
+let venda_combo = custo_combo * lucro + venda_combo
 
-console.log(custo_dogpure)
-console.log(custo_dogcremoso)
-console.log(custo_dogespecial)
-console.log(custo_combo)
-console.log("--------------");
-console.log(venda_dogpure)
-console.log(venda_dogcremoso)
-console.log(venda_dogespecial)
-console.log(venda_combo)
+console.log("Cachorro quente com pure: ")
+console.log("Preco de custo: " +custo_dogpure);
+console.log("Preço de venda: " +venda_dogpure);

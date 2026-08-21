@@ -12,10 +12,10 @@ Mostre na tela os dados do programa com as mensagens adequadas.
 let prompt = require("prompt-sync")()
 
 let peso = parseFloat ( prompt("Digite o peso do peixe: ") )
-let excesso = peso - 50  
+let excesso = peso - 50   
 
 if(peso <= 50 ){
-    console.log("O peixe esta no peso aceitavel");
+    console.log("O peixe esta no peso");
 } else {
     excesso = excesso * 4.25
     console.log("A multa por peso sera de R$" +excesso);
