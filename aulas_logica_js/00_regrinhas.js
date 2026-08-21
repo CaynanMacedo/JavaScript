@@ -24,11 +24,11 @@ desc p/ porcentagem   desconto = desconto / 100
 == iguar 
 != diferente
 
-PROMPTs
-para usar ele é necessario o 
 
-**
-**
+
+**          PROMPTs
+**  para usar ele é necessario o 
+
 
 let prompt = require("prompt-sync")()
 

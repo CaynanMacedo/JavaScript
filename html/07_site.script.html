@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML com script</title>
+</head>
+<body>
+
+    <h1>HTML com script</h1>
+    <p>Aplicando programação dentro do HTML</p>
+    <button onclick="mostrarMensagem()" >Ver mensagem</button>
+    
+    <hr/> 
+
+    <p>Clique no botão</p>
+    <button onclick="contarClicks()" >Clique em mim</button>
+
+    <script>
+        
+        function mostrarMensagem(){
+            console.log("Hello world");
+            console.log("Misturando HTML e JavaScript");
+            let resposta = prompt ("Olá usuario tudo bem ? ")
+            if (resposta == "não"){
+                alert ("Aaa que pena")
+            } else {
+                alert ("Que bom, aproveite pq passa")
+            }
+            
+        }
+        
+        let clicks = 0
+
+        function contarClicks(){
+            clicks = clicks + 1
+            alert ("Voce clickou " +clicks+ " vezes")
+            if (clicks == 10){
+                alert("Voce chegou no limite chega");
+            }
+        }
+
+    </script>
+
+
+
+</body>
+</html>
