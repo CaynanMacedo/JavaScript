@@ -17,7 +17,9 @@
     <button onclick="contarClicks()" >Clique em mim</button>
 
     <script>
+        let clicks = 0
         
+
         function mostrarMensagem(){
             console.log("Hello world");
             console.log("Misturando HTML e JavaScript");
@@ -25,12 +27,13 @@
             if (resposta == "não"){
                 alert ("Aaa que pena")
             } else {
-                alert ("Que bom, aproveite pq passa")
+                alert ("Que bom, aproveite pq passa") 
             }
             
         }
+
+
         
-        let clicks = 0
 
         function contarClicks(){
             clicks = clicks + 1
