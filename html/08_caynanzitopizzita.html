@@ -20,11 +20,24 @@
         <li>Marca Gourmet - 💲 50.000 <button>COMPRAR</button> </li>
     </ul>
 
+    <p> entre com uma conta para ganhar 💲 1.000 <button onclick="resgatarRecompensa()" >resgatar recompensa</button> </p>
+
     <script>
 
         let dinheiro = 0
         let dinheiro_click = 1
         let custo_carrinho = 25
+
+        function resgatarRecompensa(){
+            if (localStorage.getItem("autenticado" == 1) ){
+            alert("Recompensa Concebida")
+            dinheiro += 1000
+            document.getElementById(textoDinheiro).innerHTML = dinheiro
+        } else {
+            alert("Voce deve fazer login para pegar a recompensa")
+        }
+        }
+
     
         function venderPizzas(){
             dinheiro += dinheiro_click
@@ -45,6 +58,8 @@
         }
 
     </script>
+
+    <a href="./09_painel.html" >ir para o painel</a>
 
 
 </body>

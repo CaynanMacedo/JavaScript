@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paineis</title>
+</head>
+<body>
+    
+    <div id="Login" style="display: block;" >
+
+        <h1>Login</h1>
+        
+        <form >
+            <p>Digite seu usuario: </p>
+            <input id="user" />
+            <p>Digite sua senha: </p>
+            <input id="password" type="password" />
+            <br/>
+        </form>
+        
+        <button onclick="autenticar()">Entrar</button>
+
+         <a href="./08_caynanzitopizzita.html" >Ir para Caynanzito's Pizzita</a>
+
+    </div>
+
+    
+
+    <div id="painelAdministrativo" style="display: none;" >
+
+        <h1>Painel administrativo</h1>
+        <p>Voce esta lgado como <strong>administrativo</strong>.</p>
+        <button onclick="sair()">Sair da conta</button>
+
+        <a href="./08_caynanzitopizzita.html" >Ir para Caynanzito's Pizzita</a>
+
+    </div>
+
+    <script>
+
+        verificarLogin()
+        
+        function verificarLogin(){
+            let autenticado = localStorage.getItem("autenticado")
+
+            if(autenticado == 1){
+                document.getElementById("painelAdministrativo").style.display = "block"
+                document.getElementById("Login").style.display = "none"
+            }
+
+        }
+
+        function autenticar(){
+
+            let user = document.getElementById("user").value
+            let password = document.getElementById("password").value
+
+            if( user.trim().length < 3 ){
+                alert("Usuario incorreto verifique e tente novamente")
+                return  
+            } else
+
+            if( password.length == 0 ){
+                alert("Senha incorreta, verifique e tente novamente")
+                return
+            }
+
+            if(user != "administrador"){
+                alert("Usuario incorreto")
+                return
+            }
+
+            if(password != "123123"){
+                alert("Senha incorreta")
+                return
+            }
+
+            localStorage.setItem("autenticado",1)
+
+            document.getElementById("painelAdministrativo").style.display = "block"
+            document.getElementById("Login").style.display = "none"
+        }
+
+        function sair(){
+
+            localStorage.removeItem("autenticado")
+
+            document.getElementById("painelAdministrativo").style.display = "none"
+            document.getElementById("Login").style.display = "block"
+
+
+        }
+
+    </script>
+
+    
+
+</body>
+</html>
