@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+    <link rel="stylesheet" href="10.css">
+</head>
+<body>
+    
+    <h1>CRUD</h1>
+    <p>Create (inserir)</p>
+    <p>Read (buscar)</p>
+    <p>Update (alterar)</p>
+    <p>Deleat (deletar)</p>
+
+    <hr/>
+
+    <input id="inputNome" placeholder="Digite seu nome"/>
+    <button onclick="create()" >Salvar</button>
+
+    <ul id="listaUsuarios" >
+    </ul>
+
+    <script>
+
+        //dados mockados (pensar na estri=ututra)
+        
+        let nomes = ["Conrado", "Caynan", "Guilherme", "Enrique"]    //Array
+        
+        readAll()
+        
+        function readAll(){
+
+            let html = ""
+            nomes.map( i => html += "<li>"+i+"<button>🖊</button> <button>🗑</button> </li>" )
+            document.getElementById("listaUsuarios").innerHTML = html
+        }
+
+        function create(){
+            let nome = document.getElementById("inputNome").value
+            if ( nome.trim().length < 3 ){
+            alert("o nome esta curto demais")
+            return
+        } else {
+            nomes = nomes.concat(nome)
+            readAll()
+            document.getElementById("inputNome").value = ""
+        }
+            
+        }
+
+    </script>
+
+</body>
+</html>
