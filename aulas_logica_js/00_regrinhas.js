@@ -45,6 +45,17 @@ console.log("seja bem vindo(a) " +nome_completo+ " voce tem " +idade+ " anos de 
 parseInt e parceFloat trnaformam de string pra int ou float
 
 var1 = parseInt(var1) linha de baixo 
-let var2 = parseInt( prompt("Digite outro numero ") ) mema linha         
+let var2 = parseInt( prompt("Digite outro numero ") ) mema linha   
+
+`` interpolação usada enves de concatennação no js
+
+function somarNumeros(){
+
+    let n1 = 5
+    let n2 = 4
+    let soma = n1 + n2 
+
+    console.log(`a soma de ${n1} e ${n2} é ${soma}`);
+}
 
 */

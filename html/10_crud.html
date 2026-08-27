@@ -12,12 +12,13 @@
     <p>Create (inserir)</p>
     <p>Read (buscar)</p>
     <p>Update (alterar)</p>
-    <p>Deleat (deletar)</p>
+    <p>Delete (deletar)</p>
 
     <hr/>
 
     <input id="inputNome" placeholder="Digite seu nome"/>
-    <button onclick="create()" >Salvar</button>
+    <button id="botaoSalvar" onclick="create()" >Salvar</button>
+    <button id="botaoAlterar" style="display: none;" onclick="salvarAltercao()">Salvar alterações</button>
 
     <ul id="listaUsuarios" >
     </ul>
@@ -27,18 +28,52 @@
         //dados mockados (pensar na estri=ututra)
         
         let nomes = ["Conrado", "Caynan", "Guilherme", "Enrique"]    //Array
+        let posicao_alteracao = 0 
+    
         
         readAll()
+
+        function deletar(nome){
+            let resposta = confirm("Tem certeza que deseja remover? ")
+            if(resposta == false){
+                return
+            }
+            let posicao_remocao = nomes.indexOf(nome)
+            nomes.splice(posicao_alteracao, 1)
+            readAll()
+        }
+
+        function salvarAltercao(){
+            let nome = document.getElementById("inputNome").value
+
+            if ( nome.trim().length < 3 ){
+            alert("o nome esta curto demais")
+            return
+            } else {
+            nomes[posicao_alteracao] = nome
+            readAll()
+            document.getElementById("inputNome").value = ""
+            }
+        }
+
+        function update(nome){
+            posicao_alteracao = nomes.indexOf(nome)
+            document.getElementById("inputNome").value = nome
+
+            document.getElementById("botaoSalvar").style.display = "none"
+            document.getElementById("botaoAlterar").style.display = "inline-block"
+        }
         
         function readAll(){
 
             let html = ""
-            nomes.map( i => html += "<li>"+i+"<button>🖊</button> <button>🗑</button> </li>" )
+            nomes.map( i => html += `<li> ${i} <button onclick='update("${i}")'>🖊</button> <button onclick='deletar("${i}")'>🗑</button> </li>` )
             document.getElementById("listaUsuarios").innerHTML = html
         }
 
         function create(){
             let nome = document.getElementById("inputNome").value
+
             if ( nome.trim().length < 3 ){
             alert("o nome esta curto demais")
             return
